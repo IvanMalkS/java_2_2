@@ -183,7 +183,7 @@ public class InputHandler {
         }
     }
 
-    public static  boolean getBoolean(String prompt) {
+    public static boolean getBoolean(String prompt) {
         while (true) {
             showPrompt(prompt, "");
             String input = getTrimmedInput().toLowerCase();
@@ -217,7 +217,7 @@ public class InputHandler {
         }
     }
 
-    private static  boolean checkFileValidity(Path path, FileCheckConfig config) {
+    private static boolean checkFileValidity(Path path, FileCheckConfig config) {
         if (config.isCheckExistence() && !Files.exists(path)) {
             String error = config.getErrorMsg().isEmpty()
                     ? "File doesn't exist: " + path
