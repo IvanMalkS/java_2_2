@@ -19,7 +19,7 @@ public class InputHandler {
 
     protected InputHandler() {}
 
-    public static  void showPrompt(String prompt, String formatHint) {
+    public static void showPrompt(String prompt, String formatHint) {
         if (formatHint != null && !formatHint.isEmpty()) {
             System.out.println("Format: " + formatHint);
         }
@@ -83,7 +83,7 @@ public class InputHandler {
         }
     }
 
-    public static  double getDouble(DoubleInputConfig config) {
+    public static double getDouble(DoubleInputConfig config) {
         while (true) {
             showPrompt(config.getPrompt(), config.getFormatHint());
             String input = getTrimmedInput();
